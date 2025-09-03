@@ -194,7 +194,6 @@ audio {
     transform: scale(1.1);
 }
 
-
 /* Tablets */
 @media (max-width: 1024px) {
     .frame {
@@ -205,8 +204,12 @@ audio {
 
 /* Celulares */
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* impede barra horizontal */
+    }
+
     .cabecalho {
-        padding: 30px 10px 80px 10px;
+        padding: 20px 10px 60px 10px; /* menos espaço */
     }
 
     #sobre p {
@@ -217,8 +220,17 @@ audio {
         font-size: 24px;
     }
 
+    .track {
+        gap: 10px; /* menos espaço entre os cards */
+        padding: 0 10px;
+    }
+
     .frame {
-        flex: 0 0 90%;
-        max-width: 90%;
+        flex: 0 0 95%;   /* ocupa quase toda a largura */
+        max-width: 95%;
+    }
+
+    .frame .preview iframe {
+        height: 160px; /* iframes menores */
     }
 }
